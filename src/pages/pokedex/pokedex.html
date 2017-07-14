@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>pokedex</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let pokemon of pokedex; let i = index" (click)="verPokemon(pokemon)">
+      <h2>{{pokemon.nombre}}</h2>
+    </ion-item>
+  </ion-list>
+
+  <h3>Listado HTML</h3>
+
+  <ion-list>
+    <ion-item *ngFor="let pokemon of pokedex; let i = index" [navPush]="pokemonUrl" [navParams]="{'parametro': pokemon}">
+      <h2>{{pokemon.nombre}}</h2>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

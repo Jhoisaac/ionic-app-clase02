@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{pokemon.nombre}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>{{pokemon.poder}}</h3>
+
+  <button ion-button block color="primary" (click)="regresar()">
+    Regresar con evento
+  </button>
+  <button ion-button block color="secondary" navPop>
+    Regresar con HTML
+  </button>
+  <button ion-button block color="danger" (click)="regresarRoot()">
+    Regresar al Root
+  </button>
+</ion-content>
