@@ -41,7 +41,8 @@ export class AjustesPage {
   }
 
   irPop() {
-    this.popupCtrl.create(PopupPage);
+    let popup = this.popupCtrl.create(PopupPage);
+    popup.present();
 
   }
 
